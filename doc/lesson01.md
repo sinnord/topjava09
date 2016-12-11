@@ -106,6 +106,7 @@
 - <a href="http://skipy.ru/useful/logging.html">Ведение лога приложения</a>
 - <a href="http://logging.apache.org/log4j/2.x/index.html">Log4j</a>, <a href="http://logback.qos.ch/">Logback</a>
 - <a href="http://www.slf4j.org/legacy.html">Добавление зависимостей логирования</a> в проект.
+- <a href="http://logback.qos.ch/manual/configuration.html#variableSubstitution">Logback variable substitution</a>
 - Конфигурирование логирования. Настройка Live Template.
 - Тестирование логирования в сервлете.
 
