@@ -2,31 +2,28 @@
 
 ### <a href="https://drive.google.com/drive/folders/0B9Ye2auQ_NsFfkpsWE1uX19zV19IVHd0bTlDclc5QmhMMm4xa0Npek9DT18tdkwyLTBZdXM">Материалы занятия (скачать все патчи можно через Download папки patch)</a>
 
-## ![hw](https://cloud.githubuserТcontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW1:
+## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW1:
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFXzByNVF3VV9zM1k">Отображения списка еды в JSP</a>
 - **Apply 2-1-HW1.patch**
 
-> Изменения в `MealsUtil`:
-  - Сделал константу `List<Meal> MEALS`
-  - Сделал вспомогательный метод `getWithExceeded`
-
-> Форматирование даты сделал на основе <a href="http://stackoverflow.com/questions/35606551/jstl-localdatetime-format#35607225">JSTL LocalDateTime format</a>
-
-> Переименовал `TimeUtil` в `DateTimeUtil`
+> - Изменения в `MealsUtil`:
+>    - Сделал константу `List<Meal> MEALS`
+>    - Сделал вспомогательный метод `getWithExceeded`
+> - Форматирование даты сделал на основе <a href="http://stackoverflow.com/questions/35606551/jstl-localdatetime-format#35607225">JSTL LocalDateTime format</a>
+> - Переименовал `TimeUtil` в `DateTimeUtil`
+> - Переименовал `mealList.jsp` в `meals.jsp`
 
 - <a href="http://design-pattern.ru/patterns/mvc.html">MVC - Model View Controller</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQndBeWFOa3phRTg">Optional: реализация CRUD</a>
 - **Apply 2-2-HW1-optional.patch**
 
-> Про repository будет подробно в видео "Слои приложения"
+> - Переименовал `mealEdit.jsp` в `meal.jsp`
+> - Про repository будет подробно в видео "Слои приложения"
+> - В `meal.jsp` используется <a href="http://stackoverflow.com/questions/1890438/how-to-get-parameters-from-the-url-with-jsp#1890462">параметр запроса `param.action`</a>, он не кладется а аттрибуты.
 
-> Переименовал `mealList.jsp` в `meals.jsp` и `mealEdit.jsp` в `meal.jsp`
-
-- В `meal.jsp` используется <a href="http://stackoverflow.com/questions/1890438/how-to-get-parameters-from-the-url-with-jsp#1890462">параметр запроса `param.action`</a>, он не кладется а аттрибуты.
 - <a href="http://stackoverflow.com/questions/246859/http-1-0-vs-1-1">HTTP 1.0 vs 1.1</a>
-
 
 ### ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Вопросы по HW1
 
@@ -45,9 +42,8 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeWZ1d1cxaUZiUmc">Слои приложения. Создание каркаса приложения.</a>
 - **Apply 2-3-app-layers.patch**
 
->  Поменял `LoggedUser` на `AuthorizedUser`
-
-> Про DTO еще можно будет посмотреть в видео Алименкова "Босиком по Граблям", когда мы добавим Hibernate
+> - Поменял `LoggedUser` на `AuthorizedUser`
+> - Про DTO еще можно будет посмотреть в видео Алименкова "Босиком по Граблям", когда мы добавим Hibernate
 
 -  <a href="http://en.wikipedia.org/wiki/Multilayered_architecture">Паттерн "Слои приложения"</a>
 -  <a href="https://www.genuitec.com/products/myeclipse/learning-center/spring/myeclipse-for-spring-reference-blueprints/">Архитектурные
