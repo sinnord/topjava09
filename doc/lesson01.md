@@ -220,6 +220,10 @@ protected void doPost(HttpServletRequest request, ...) {
 
 См. <a href="http://stackoverflow.com/questions/5243754/difference-between-getattribute-and-getparameter">Difference between getAttribute() and getParameter()</a>. Отсюда также следует, что при редиректе что аттрибуты теряются.
 
+> Зачем нужен в jsp `<jsp:useBean id=".." scope="request" type=".."/>` ?
+
+<a href="http://www.java2ee.ru/jsp/useBean.html">jsp:useBean</a> нужен IDEA для автодополнений - она понимает тип переменной, которая уже доступна в JSP (например через setAttribute). И еще эта переменная становится доступнойв java вставках. Для вывода через тэги JSP это тэг не обязателен. Если тип переменной JSP не совпадает с тем, что в `jsp:useBean`, будет ошибка.
+
 ----------------------------
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Типичные ошибки
 - Хранение в памяти и операции с ней должны выполняться просто и эффективно
