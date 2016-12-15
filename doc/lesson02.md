@@ -45,7 +45,7 @@
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeWZ1d1cxaUZiUmc">Слои приложения. Создание каркаса приложения.</a>
 - **Apply 2-3-app-layers.patch**
-
+> - Переименовал `ExceptionUtil` в `ValidationUtil`
 > - Поменял `LoggedUser` на `AuthorizedUser`
 > - Про DTO еще можно будет посмотреть в видео Алименкова "Босиком по Граблям", когда мы добавим Hibernate
 
