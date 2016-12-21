@@ -165,8 +165,10 @@
 ---------------------
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Подсказки по HW02 (для проверки, сначала сделайте самостоятельно!)
 
-- `InMemoryUserRepositoryImpl.getByEmail` попробуйте сделать через `stream`
-- `InMemoryUserRepositoryImpl.delete` попробуйте сделать за одно обращение к map
+- В реализации `InMemoryUserRepositoryImpl`
+  - `getByEmail` попробуйте сделать через `stream`
+  - `delete` попробуйте сделать за одно обращение к map
+  - `get\delete` - следите, чтобы не было NPE (NullPointException)
 - `MealRestController` должен уметь обрабатывать запросы:
     - Отдать свою еду (для отображения в таблице, формат `List<MealWithExceed>`), запрос БЕЗ параметров
     - Отдать свою еду, отфильтрованную по startDate, startTime, endDate, endTime
