@@ -37,6 +37,14 @@
 >  Какой смысл в `Objects.requireNonNull()`? Если у нас объект == null он бросает NPE (`NullPointException`), но оно вылетит и без этого метода. 
 - Предусловия подробно будет на 4м уроке. Мы падаем сразу и понятно где по стактрайсу. А не "может быть потом" и разбирайся откуда. <a href="http://stackoverflow.com/questions/27511106/what-is-the-purpose-of-objectsrequirenonnull#27511204">What is the purpose of Objects#requireNonNull</a>. 
 
+> Что делает `repository.computeIfAbsent(userId, ConcurrentHashMap::new)` ?
+
+Всегда! пробуйте ответить на вопрос сами. Дастоточно просто зайти по Ctrl+мышка в `computeIfAbsent` п посмотреть описании метода и его дефолтную реализацию
+
+> Почему выбрана раализация `Map<userId, Map<mealId,Meal>>` а не `Meal.userId + Map<mealId,Meal>` ?
+
+В данном случае двойной мап - саммый эффективный способ хранения, который не требует итерирования (перебора всех значений).
+
 ## Занятие 3:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFOU8wWlpPVE05STA">Коротко о жизненном цикле Spring контекста.</a>
 - **Apply 6-bean-life-cycle.patch**
