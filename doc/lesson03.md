@@ -35,7 +35,8 @@
 ### ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Вопросы по HW2
 
 >  Какой смысл в `Objects.requireNonNull()`? Если у нас объект == null он бросает NPE (`NullPointException`), но оно вылетит и без этого метода. 
-- Предусловия подробно будет на 4м уроке. Мы падаем сразу и понятно где по стактрайсу. А не "может быть потом" и разбирайся откуда. <a href="http://stackoverflow.com/questions/27511106/what-is-the-purpose-of-objectsrequirenonnull#27511204">What is the purpose of Objects#requireNonNull</a>. 
+
+Предусловия подробно будет на 4м уроке. Мы падаем сразу и понятно где по стактрайсу. А не "может быть потом" и разбирайся откуда. <a href="http://stackoverflow.com/questions/27511106/what-is-the-purpose-of-objectsrequirenonnull#27511204">What is the purpose of Objects#requireNonNull</a>. 
 
 > Что делает `repository.computeIfAbsent(userId, ConcurrentHashMap::new)` ?
 
