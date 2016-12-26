@@ -217,3 +217,4 @@ UNIQUE индекс нужен для обеcпечения уникальнос
 - SQL  case-insensitive, не надо писать в стиле Camel. В POSTGRES возможны case-sensitive значения, их надо в кавычки заключать (обычно не делают).
 - ЕЩЕ РАЗ: `InMemory` тесты должны идти на `InMemory` репозитории
 - **Проверьте, что возвращает `JdbcMealRepositoryImpl` при обновлении чужой еды**
+- В реализации `JdbcMealRepositoryImpl` одним SQL запросом используйте возвращаемое `update` значение `the number of rows affected`
