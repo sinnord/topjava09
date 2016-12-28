@@ -219,3 +219,4 @@ UNIQUE индекс нужен для обеcпечения уникальнос
 - ЕЩЕ РАЗ: `InMemory` тесты должны идти на `InMemory` репозитории
 - **Проверьте, что возвращает `JdbcMealRepositoryImpl` при обновлении чужой еды**
 - В реализации `JdbcMealRepositoryImpl` одним SQL запросом используйте возвращаемое `update` значение `the number of rows affected`
+- Для `MealTestData.MATCHER` можно использовать конструктор `ModelMatcher` без параметров (компаратор по умолчанию)
