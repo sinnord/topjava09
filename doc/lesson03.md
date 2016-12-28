@@ -191,8 +191,7 @@ UNIQUE индекс нужен для обеcпечения уникальнос
 - 2. Сделать `MealServiceTest` из `MealService` (`Ctrl+Shift+T` и выбрать JUnit4) и реализовать тесты.
 - 3. Сделать тесты на чужих юзеров (delete, get, update) с тем чтобы получить `NotFoundException` и тесты на `update` чужой еды.
 - 4. Предложить решение, как почнинить `SpringMain, InMemory*Test`. `InMemory*Test` должны использовать реализацию в памяти
-- 5. Сделать индексы к таблице `Meals`.
-  - <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">Postgres and Indexes on Foreign Keys and Primary Keys</a>
+- 5. Сделать индексы к таблице `Meals`. Индекс на pk (id) postgres создает автоматически: <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">Postgres and Indexes on Foreign Keys and Primary Keys</a>
   - <a href="http://postgresguide.com/performance/indexes.html">Postgres Guide: Indexes</a>
   
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Решение проблем
