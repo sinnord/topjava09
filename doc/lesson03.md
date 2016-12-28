@@ -207,7 +207,9 @@ UNIQUE индекс нужен для обеcпечения уникальнос
 
 ![image](https://cloud.githubusercontent.com/assets/13649199/18831806/7e43bedc-83f0-11e6-97db-67d4e1a7599f.png)
 
-- Поставьте чекбокс `Check test files` в Inspections. Spring test контекст не надо включать в Spring Facets проекта.
+> В UserServiceImpl и MealServiceImpl подчеркнуты красным repository, ошибка: Could not autowire. There is more than one bean of 'MealRepository' type.
+
+- Spring test контекст не надо включать в Spring Facets проекта, там должны быть только `spring-app.xml` и `spring-db.xml`. Для тестовых контекстов поставьте чекбокс `Check test files` в Inspections. 
 
 ![image](https://cloud.githubusercontent.com/assets/13649199/18831817/8a858f22-83f0-11e6-837e-bf5317b33b3a.png)
 
