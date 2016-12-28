@@ -189,7 +189,7 @@ UNIQUE индекс нужен для обеcпечения уникальнос
 #### Optional
 - 1. Сделать тестовые данные `MealTestData`, АНАЛОГИЧНЫЕ пропопулированным в `populateDB.sql`. Сравниваем данные через `MealTestData.MATCHER`
 - 2. Сделать `MealServiceTest` из `MealService` (`Ctrl+Shift+T` и выбрать JUnit4) и реализовать тесты.
-- 3. Сделать тесты на чужих юзеров (delete, get, update) с тем чтобы получить `NotFoundException` и тесты на `update` чужой еды.
+- 3. Сделать тесты на чжую еду (delete, get, update) с тем чтобы получить `NotFoundException`.
 - 4. Предложить решение, как почнинить `SpringMain, InMemory*Test`. `InMemory*Test` должны использовать реализацию в памяти
 - 5. Сделать индексы к таблице `Meals`. Индекс на pk (id) postgres создает автоматически: <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">Postgres and Indexes on Foreign Keys and Primary Keys</a>
   - <a href="http://postgresguide.com/performance/indexes.html">Postgres Guide: Indexes</a>
