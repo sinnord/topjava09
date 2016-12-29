@@ -5,13 +5,13 @@
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 #### Apply 0-fix.patch
 
-> - В SQL операторах команды SQL пишут uppercase а таблицы/колонки - lowercase
+> - В SQL операторах ключевые слова пишут uppercase а таблицы/колонки - lowercase
 > - Небольшая оптимизация `InMemoryMealRepositoryImpl.save()`
-> - Поправил `SpringMain` ()при создании пользователя id проверяется на null)
+> - Поправил `SpringMain` (при создании пользователя id проверяется на null)
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW3
 
-> `SpringMain, InMemoryAdminRestControllerTest, InMemoryAdminRestControllerSpringTest` починим в патче 5-create-mock-test-ctx.patch (видео 4)
+> `SpringMain, InMemoryAdminRestControllerTest, InMemoryAdminRestControllerSpringTest` починим в патче **5-create-mock-test-ctx.patch** (видео 4)
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFdVhaMklZQVNkUGc">JdbcMealRepositoryImpl + MealServiceTest</a>
 #### **Apply 1-HW3.patch**
@@ -31,11 +31,10 @@
 ## Занятие 4:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFU005ZzBNZmZnTVU">Методы улучшения качества кода</a>
 
-> Подключите сверху <a href="https://github.com/JavaWebinar/topjava09/blob/master/README.md">README.md</a> (<a href="https://raw.githubusercontent.com/JavaWebinar/topjava09/master/README.md">Raw</a>) своего проекта интергацию с
-- <a href="https://www.codacy.com">Codacy Check code</a>
-- <a href="https://dependencyci.com/">Continuously Test Your Dependencies</a>
-- <a href="https://travis-ci.org/">Сборку и тесты Travis</a>
-
+> - Подключите сверху <a href="https://github.com/JavaWebinar/topjava09/blob/master/README.md">README.md</a> (<a href="https://raw.githubusercontent.com/JavaWebinar/topjava09/master/README.md">Raw</a>) своего проекта интергацию с
+>   - <a href="https://www.codacy.com">Codacy Check code</a>
+>   - <a href="https://dependencyci.com/">Continuously Test Your Dependencies</a>
+>   - <a href="https://travis-ci.org/">Сборку и тесты Travis</a>
 > - Пофиксил в патче <a href="https://www.codacy.com/app/javawebinar/topjava09/dashboard">Codacy Issues</a> (проверку assert в JUnit отключил в настройках)
 > - Перенес проверки пердусловий `Assert` из `InMemory` репозиториев в сервисы
 > - Добавил конфигурацию `.travis.yml` 
@@ -133,7 +132,7 @@
 > Чистого JPA не существует, т.е. это всего лишь интерфейс, спецификация? Говорим JPA, подразумеваем какой-то ORM фрэймворк? А что тогда используют чистый jdbc, Spring-jdbc, MyBatis? MyBatis не реализует JPA?
 
 <a href="https://ru.wikipedia.org/wiki/ORM">ORM</a> это технология связывания БД и объектов приложения, а <a href="https://ru.wikipedia.org/wiki/Java_Persistence_API">JPA</a> - это JavaEE спецификация (API) которая реализует эту концепцию.
-Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например Hibernate может работать по собственному API (без JPA, которая появиласть позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA, это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
+Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например, Hibernate может работать по собственному API (без JPA, которая появиласть позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA, это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
 
 > В зависимостях maven `hibernate-entitymanager` тянет за собой `jboss-logging`. Как будет происходить логгирование?
 
