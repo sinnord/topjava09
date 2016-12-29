@@ -36,7 +36,7 @@
 >   - <a href="https://dependencyci.com/">Continuously Test Your Dependencies</a>
 >   - <a href="https://travis-ci.org/">Сборку и тесты Travis</a>
 > - Пофиксил в патче <a href="https://www.codacy.com/app/javawebinar/topjava09/dashboard">Codacy Issues</a> (проверку assert в JUnit отключил в настройках)
-> - Перенес проверки пердусловий `Assert` из `InMemory` репозиториев в сервисы
+> - Перенес проверки предусловий `Assert` из `InMemory` репозиториев в сервисы
 > - Добавил конфигурацию `.travis.yml` 
 >   - <a href="https://docs.travis-ci.com/user/languages/java/">Сборка Java проекта</a>
 >   - <a href="https://dzone.com/articles/travis-ci-tutorial-java-projects">Travis CI Tutorial</a>
