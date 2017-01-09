@@ -151,6 +151,12 @@ Hibernate (как любая ORM) реализует маппинг таблиц
 
 Он автоматически определяется из `DataSource` драйвера: http://stackoverflow.com/a/39817822/548473
 
+> В чем разница между `persist` и `merge`
+
+<a href="http://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge">Подробный ответ со Stackovwrflow</a> с объяснением разницы. Упрощенно:
+  - `merge`, в отличии от `persist`, если entity нет в текущей сессии, делает запрос в базу данных
+  - entity, переданный в `merge` не меняется и нужно использовать возвращаемый результат
+
 --------------------
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW4
