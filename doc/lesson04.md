@@ -162,6 +162,7 @@ Hibernate (как любая ORM) реализует маппинг таблиц
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW4
 
 - Сделать из `Meal` Hibernate entity
+  - <a href="http://stackoverflow.com/questions/17137307">Hibernate Validator: @NotNull, @NotEmpty, @NotBlank</a>
 - Имплементировать и протестировать `JpaMealRepositoryImpl`
   -  IDEA не понимает в `@NamedQuery` `..  m.dateTime BETWEEN ..`. На функциональность это не влияет.
   - Работа с LocalDate/Time уже включена `hibernate-core` 5.2.x:  
