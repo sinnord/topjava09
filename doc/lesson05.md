@@ -35,6 +35,7 @@
 
 #### Apply 3-HW4-optional.patch
 
+> - <a href="http://stackoverflow.com/a/33001846/548473">Hibernate 5.2.x already include Java 8 date and time types (JSR-310)</a>
 > - <a href="http://stackoverflow.com/questions/14892125/what-is-the-best-practice-to-determine-the-execution-time-of-the-bussiness-relev#27868954">Stopwatch</a>
 > - Добавил сводку "имя теста - время выполнения" в конце класса
 
