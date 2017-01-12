@@ -27,7 +27,7 @@
 > - В `Meal` добавил `@SuppressWarnings("JpaQlInspection")`. <a href="https://jazzy.id.au/2008/10/30/list_of_suppresswarnings_arguments.html">Other warnings</a>
 > - Поменял реализацию `JpaMealRepositoryImpl.get()` (вместо `@NamedQuery`), реализация стали проще
 
-### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) **Сравните запросы в базу `MealServiceTest.testGet()` до и после патча 2-fix-hibernate-issue!!**
+#### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Сравните запросы в базу `MealServiceTest.testGet()` до и после патча 2-fix-hibernate-issue!
 #### Apply 2-fix-hibernate-issue.patch
 > Сделал доступ к полю `BaseEntity.id` через `AccessType.PROPERTY`: <a href="https://hibernate.atlassian.net/browse/HHH-3718">hibernate bug with proxy initialization when using `AccessType.FIELD`</a>   
 
