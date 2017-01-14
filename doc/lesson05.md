@@ -74,6 +74,7 @@
 > - Переименовал классы _Proxy*_ на более адекватные _Crud*_
 > - Поправил `equals()`, добавил `toString()` и `implements Persistable`, похожей на реализацию <a href="https://github.com/spring-projects/spring-data-jpa/blob/master/src/main/java/org/springframework/data/jpa/domain/AbstractPersistable.java">spring-data-jpa `AbstractPersistable`</a>. 
 >   - <a href="The JPA hashCode() / equals() dilemma">http://stackoverflow.com/questions/5031614/the-jpa-hashcode-equals-dilemma</a>
+>   - <a href="http://blog.xebia.com/advanced-hibernate-proxy-pitfalls/">Hibernate Proxy Pitfalls</a>
 
 -  <a class="anchor" id="datajpa"></a><a href="http://projects.spring.io/spring-data-jpa/">Spring Data JPA</a>
 -  Замена AbstractDAO: <a href="http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories">JPA Repositories</a>
