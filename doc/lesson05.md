@@ -115,6 +115,10 @@
 
 Будем делать на следующем уроке
 
+ > Почему при  выборе профиля hsqldb в IDEA `spring-db.xml` профиле posgres краснеют параметры
+ 
+ IDEA не может определить параметры `org.apache.tomcat.jdbc.pool.DataSource`, потому что в профиле hsqldb этого класса (модуля `tomcat-jdbc`) нет в classpath
+ 
 --------------------
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZFdWWFdwams0eGM">Домашнее задание HW05</a>
