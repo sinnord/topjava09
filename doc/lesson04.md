@@ -64,6 +64,8 @@
 > - ВНИМАНИЕ: патч меняет `postgres.properties`, в котором у вас свои креденшелы к базе.
 > - Тесты и приложение ломаются. `MealServiceTest` починится после выполнения HW04 (`JpaMealRepositoryImpl`)
 
+<a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Entity</a>- класс (объект Java), который в ORM маппится в таблицу DB.
+
 #### **Apply 6-add-jpa.patch**
 
 > - Upgrade Hibernate up to 5.0.4 needed to add `javax.transaction.jta`, see <a href="https://hibernate.atlassian.net/browse/HHH-10307">5.0.4 requires javax.transaction.SystemException</a>
