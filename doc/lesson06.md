@@ -5,7 +5,7 @@
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правка и миграция
 #### Apply 0-entity-fix.patch
 - Сделал правки в модели для генерации ДБ
-- Заменил в `User` ваидацию `@Digits` на `@Range`
+- Заменил в `User` валидацию `@Digits` на `@Range`
 - Поправил доступ к `id` через `getId()` 
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW5
@@ -27,15 +27,15 @@
 
 - `Profiles.ACTIVE_DB` и `Profiles.DB_IMPLEMENTATION` задают конкретные профили при запуске приложения или запуске тестов (через `@ActiveProfiles`). 
 - бины Spring мы разделяем (фильтруем) по разным профилям с помощью `beans profile` в xml конфигурации и `@Profile` (те мы конфигурим, какие бины попадут в контекст Spring в зависимости от профилей приложения). 
-- <a href="http://javarticles.com/2013/12/spring-profiles.html">Spring Profiles</a>. <a href="https://www.javacodegeeks.com/2013/10/spring-4-conditional.html">Spring 4 Conditional</a>. 
-- зайдите в исходники `@Profile` и посмотрите его  реализацию через `@Conditional(ProfileCondition.class)`.
+  - <a href="http://javarticles.com/2013/12/spring-profiles.html">Spring Profiles</a>. <a href="https://www.javacodegeeks.com/2013/10/spring-4-conditional.html">Spring 4 Conditional</a>. 
+  - зайдите в исходники `@Profile` и посмотрите его  реализацию через `@Conditional(ProfileCondition.class)`.
  
 #### Apply 5-HW5-optional-fetch-join.patch
 -  <a href="http://stackoverflow.com/questions/11938253/jpa-joincolumn-vs-mappedby">JPA JoinColumn vs mappedBy</a>
 -  <a href="https://en.wikibooks.org/wiki/Java_Persistence/OneToMany#Unidirectional_OneToMany.2C_No_Inverse_ManyToOne.2C_No_Join_Table_.28JPA_2.x_ONLY.29">Unidirectional OneToMany</a>
 
 > Добавлены проверки и тесты на `NotFound` для `MealService.getWithUser` и  `UserService.getWithMeals`
-> Убрал `CascadeType.REMOVE`, см. <a href=#-4-Профили-maven-и-spring
+> Убрал `CascadeType.REMOVE`, в уроке далее будет про Cascade.
 
 #### Apply 6-HW5-graph-batch-size.patch
 
@@ -58,6 +58,7 @@
 ### Автоматический выбор профиля базы. `ActiveProfilesResolver`
 > - Сделал автоматический выбор профиля базы при запуске приложения (тестов) в зависимости от драйвера базы в classpath (`Profiles.getActiveDbProfile()`)
 > - Профиль базы для тестов задается через <a href="http://stackoverflow.com/questions/23871255/spring-profiles-simple-example-of-activeprofilesresolver">`ActiveProfilesResolver`</a>
+
 #### Apply 8-profile-resolver.patch
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeTV0SUFfblk5NE0">Кэш Hibernate</a>
