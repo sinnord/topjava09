@@ -145,3 +145,4 @@
 - Если у метода нет реализации, то стандартно бросается `UnsupportedOperationException`.
 - Для уменьшения количества кода при реализации _Optional_ попробуйте сделать `default` метод в интерфейсе
 - В Data-Jpa метод для ссылки на entity (аналог `em.getReference`) : `T getOne(ID id)`
+- Проверьте, что в `DataJpaMealRepositoryImpl` все обращения к DB выполняются в **одной транзакции**
