@@ -55,6 +55,8 @@
 >  - поменять `Profiles.ACTIVE_DB = HSQLDB`
 >  - почистить проект `mvn clean` (фаза `clean` не выполняется автоматически, чтобы каждый раз не перекомпилировать весь проект)
 
+`Profiles.ACTIVE_DB` и `Profiles.DB_IMPLEMENTATION` будут задавать конкретные профили при запуске приложения (в `@ActiveProfiles` для тестов).
+
 > Вопрос: почему после этого патча не поднимется Spring при запуске приложения в Tomcat?
  
 - <a href="https://dzone.com/articles/using-spring-profiles-xml">Using Spring Profiles in XML Config</a>
@@ -124,7 +126,7 @@
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZFdWWFdwams0eGM">Домашнее задание HW05</a>
 
 - 1 Имплементировать `DataJpaMealRepositoryImpl`
-- 2 Разделить реализации Repository по профилям Spring: `jdbc`, `jpa`, `datajpa` (общее в профилях можно объединять, например `<beans profile="datajpa,jpa">`). Новые профили ортоганальны (независимы) от `postgres`, `hsqldb`.
+- 2 Разделить реализации Repository по профилям Spring: `jdbc`, `jpa`, `datajpa` (общее в профилях можно объединять, например `<beans profile="datajpa,jpa">`). Новые профили ортоганальны (независимы) от `postgres`, `hsqldb`. 
   - Для интеграции с IDEA не забудте выставить в `spring-db.xml` справа вверху в `Change Profiles...` профили, например `datajpa, postgres`
   - Общие части для всех в `spring-db.xml` можно оставить как есть без профилей, но до первого `<beans profile=` (вверху файла).
 - 3 Сделать тесты всех реализаций (`jdbc, jpa, datajpa`) через наследование (без дублирования), **сделать общий базовый класс для `MealServiceTest` и `UserServiceTest`**.
@@ -132,7 +134,7 @@
 
 #### Optional
 
-- 5 Починить `JdbcMealRepositoryImpl` (HSQLDB не умеет работать с Java8 Time API). Например разделить реализацию для HSQLDB и Postgres через `@Profile`.
+- 5 Починить `JdbcMealRepositoryImpl` для HSQLDB (она не умеет работать с Java8 Time API). Например разделить реализацию для HSQLDB и Postgres через `@Profile`. Бины Spring мы разделяем (фильтруем) по разным профилям с помощью `beans profile` в xml конфигурации и @Profile (те мы конфигурируем, какие бины попадут в контекст Spring в зависимости от профилей запущенного приложения). Абстрактные классы не создаются и в контекст не попадают. Профили, заданные в @Profile пересекаются с активными профилями приложения: если пересечение есть, то бин включается в контекст. См. реализацию `@Profile` и в ней `ProfileCondition` (можно подебажить).
 - 6 Починить `MealServlet` и использовать в `SpringMain` реализацию DB: добавить профили. Попробуйте поднять Spring контекст без использования `spring.profiles.activ`.
 - 7 Сделать и протестировать в сервисах методы (тесты только для `DataJpa` реализации)
   - 7.1  достать по id пользователя вместе с его едой
