@@ -25,10 +25,8 @@
 #### Apply  4-HW5-optional-fix-jdbc-profiles.patch
 > - HSQLDB driver не понимает `LocalDateTime`, сделал внутренние классы: `Java8JdbcMealRepositoryImpl` и `TimestampJdbcMealRepositoryImpl`
 
-- `Profiles.ACTIVE_DB` и `Profiles.DB_IMPLEMENTATION` задают конкретные профили при запуске приложения или запуске тестов (через `@ActiveProfiles`). 
-- бины Spring мы разделяем (фильтруем) по разным профилям с помощью `beans profile` в xml конфигурации и `@Profile` (те мы конфигурим, какие бины попадут в контекст Spring в зависимости от профилей приложения). 
-  - <a href="http://javarticles.com/2013/12/spring-profiles.html">Spring Profiles</a>. <a href="https://www.javacodegeeks.com/2013/10/spring-4-conditional.html">Spring 4 Conditional</a>. 
-  - зайдите в исходники `@Profile` и посмотрите его  реализацию через `@Conditional(ProfileCondition.class)`.
+- <a href="http://javarticles.com/2013/12/spring-profiles.html">Spring Profiles</a>. <a href="https://www.javacodegeeks.com/2013/10/spring-4-conditional.html">Spring 4 Conditional</a>. 
+- зайдите в исходники `@Profile` и посмотрите (подебажте) его  реализацию через `@Conditional(ProfileCondition.class)`.
  
 #### Apply 5-HW5-optional-fetch-join.patch
 -  <a href="http://stackoverflow.com/questions/11938253/jpa-joincolumn-vs-mappedby">JPA JoinColumn vs mappedBy</a>
