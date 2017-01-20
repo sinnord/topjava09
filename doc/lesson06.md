@@ -13,6 +13,9 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFUVZobXRzNWFzUW8">HW5: Spring Profiles. Spring Data JPA</a>
 
 #### Apply 1-HW5-data-jpa.patch
+
+Транзакция начинается, когда встречается первый `@Transactional`. С default propagation `REQUIRED` остальные `@Transactional` просто участвуют в первой. Поэтому ставим ее сверху `DataJpaMealRepositoryImpl.save()`, чтобы все обращения к базе внутри метода были в одной транзакции. Еще, если из сервиса собирается несколько запросов в репозитории, он ставится над методом сервиса.
+
 #### Apply 2-HW5-profiles.patch
 > Для IDEA не забудте выставить Spring Profiles в `spring-db.xml`: нарпимер `datajpa, postgres`
 
