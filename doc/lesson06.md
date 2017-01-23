@@ -229,6 +229,7 @@ _ru.javawebinar.topjava.model.User_ - имя региона, которое ис
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW06
 - 1.1 Починить `InMemory..` тесты (в новой версии Spring классы `spring-mvc` требуют `WebApplicationContext`, поэтому поправьте `mock.xml`)
 - 1.2 Починить Jdbc тесты (без валидации)
+  - <a href="http://iliachemodanov.ru/ru/blog-ru/12-tools/57-junit-ignore-test-by-condition-ru">org.junit.Assume</a>
 - 1.3 Починить работу meals: перенести функциональность `MealServlet` в контроллеры (сервлеты удалить)
   - 1.3.1 разнести запросы на update/delete/.. по разным методам (попробуйте вообще без `action=`). Можно по аналогии с `RootController#setUser` принимать `HttpServletRequest request` (аннотации на параметры и адаптеры для `LocalDate\Time` мы введем позже).
   - 1.3.2 добавить локализацию и `jsp:include` в `meal/meals.jsp`
