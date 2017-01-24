@@ -232,7 +232,7 @@ _ru.javawebinar.topjava.model.User_ - имя региона, которое ис
   - <a href="http://iliachemodanov.ru/ru/blog-ru/12-tools/57-junit-ignore-test-by-condition-ru">org.junit.Assume</a>
   - <a href="http://www.ekiras.com/2015/09/spring-how-to-get-current-profiles-in-spring-application.html">How to get Current Profiles in Spring Application</a>
 - 1.3 Починить работу meals: перенести функциональность `MealServlet` в контроллеры (сервлеты удалить)
-  - 1.3.1 разнести запросы на update/delete/.. по разным методам (попробуйте вообще без `action=`). Можно по аналогии с `RootController#setUser` принимать `HttpServletRequest request` (аннотации на параметры и адаптеры для `LocalDate\Time` мы введем позже).
+  - 1.3.1 разнести запросы на update/delete/.. по разным методам (попробуйте вообще без `action=`). Можно по аналогии с `RootController#setUser` принимать `HttpServletRequest request` (аннотации на параметры и адаптеры для `LocalDate\Time` мы введем позже). В одном контроллере нельзя использовать другой, чтобы не дублировать код можно сделать наследование.
   - 1.3.2 добавить локализацию и `jsp:include` в `meal/meals.jsp`
 
 #### Optional
