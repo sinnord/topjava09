@@ -98,7 +98,7 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5.  <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFVE1jWkRucm1UTjA">Spring Web</a>
 #### Apply 11-spring-web.patch
 > - Для сборки проекта в окне Maven отключите тесты (`Toggele 'Skip Tests' Mode`)
-> - В `pom.xml` добавляеются профили запуска по умолчанию: `<param-value>postgres,datajpa</param-value>`. Если запускаетесь под HSQLDB, надо поменять.
+> - В `web.xml` добавляеются профили запуска по умолчанию: `<param-value>postgres,datajpa</param-value>`. Если запускаетесь под HSQLDB, надо поменять.
 
 -  Добавляем в проект веб зависимости
 -  Поднятие контекста Spring в веб приложении. <a href="http://www.mkyong.com/servlet/what-is-listener-servletcontextlistener-example/">ServletContextListener</a>. Задание дефолтного профиля.
@@ -217,7 +217,7 @@ _ru.javawebinar.topjava.model.User_ - имя региона, которое ис
 
 > У меня стоит томкат 7 версии, в помнике у нас 8 прописан, но всё работает. Почему?
 
-В pom.xml мы подключаем servlet-api версии 3.1 со `scope=provided`, что означает что он используется только для компиляции и не идет в war. Тк мы не используем никаких фич 3.1, то наш код совместим с Tomcat 7.x. При запуске через `cargo-maven2-plugin` Tomcat 8 загружается из maven репозитория.
+В `pom.xml` мы подключаем servlet-api версии 3.1 со `scope=provided`, что означает что он используется только для компиляции и не идет в war. Тк мы не используем никаких фич 3.1, то наш код совместим с Tomcat 7.x. При запуске через `cargo-maven2-plugin` Tomcat 8 загружается из maven репозитория.
 
 > Откуда `@Transactional` вытягивает класс для работы с транзакцией, в составе какого бина он идет?
 
