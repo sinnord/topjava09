@@ -47,7 +47,7 @@ SELECT u.*, string_agg(ur.role, ',') AS roles FROM users u JOIN user_roles ur ..
 > - в `MockMvc` добавился `CharacterEncodingFilter`
 > - добавил `AllActiveProfileResolver`
 
--  <a href="http://hamcrest.org/JavaHamcrest/">Hamcrest</a>
+-  <a href="https://github.com/hamcrest/hamcrest-junit">Hamcrest</a>
 -  <a href="http://www.petrikainulainen.net/programming/spring-framework/unit-testing-of-spring-mvc-controllers-normal-controllers/">Unit Testing of Spring MVC Controllers</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFWE5oSmJFZGZBRlE">REST контроллеры</a>
