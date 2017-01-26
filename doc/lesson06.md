@@ -267,3 +267,4 @@ _ru.javawebinar.topjava.model.User_ - имя региона, которое ис
 - Если неправильно формируется url относительно контекста приложения, посмотрите <a href="http://stackoverflow.com/questions/4764405/how-to-use-relative-paths-without-including-the-context-root-name">Use relative paths without including the context root name</a>
 - При проблемах с запуском томкат проверьте запущенные `java` процессы, нет ли в `TOMCAT_HOME\webapps` приложения каталога `topjava`, логи tomcat - нет ли проблем с доступом к каталогам или контекстом Spring.
 - Если создаете List с одним значением или Map с одним ключом-значением, пользуйтесь `Collections.singleton..`
+- В MealController общую часть `@RequestMapping(value = "/meals")` лучше вынести на уровень класса
