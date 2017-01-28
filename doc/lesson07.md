@@ -146,3 +146,4 @@ hamcrest-all используется в проверках `RootControllerTest`
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Подсказки по HW07
 - для тестирования в MealRestController списка MealWithExceeded сделайте ModelMatcher&lt;MealWithExceed&gt;
 - Ошибка в тесте _Invalid read array from JSON_ обычно расшифровывается немного ниже: читайте внимательно.
+- <a href="https://urvanov.ru/2016/12/03/jackson-и-неизменяемые-объекты/">Jackson и неизменяемые объекты</a>
