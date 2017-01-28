@@ -106,8 +106,11 @@ SELECT u.*, string_agg(ur.role, ',') AS roles FROM users u JOIN user_roles ur ..
 
 `AbstractControllerTest` аннотируется `@Transactional` - это означает, что тесты идут в транзакции и после каждого теста JUnit делает rollback базы.
 
-> После патча 7_12 тест ProfileRestControllerTest.testGet нам оставляет поле meals:null хотя мы задали чтоб не сериализовались null поля.
-  Почему его оставляет сериализатор? (конечно если выставим NON_EMPTY то уберет)
+> Что получается в результате выполнения запроса `SELECT DISTINCT(u) FROM User u LEFT JOIN FETCH u.roles ORDER BY u.name, u.email`? В чем разница в SQL без `DISTINCT`. 
+
+Запросы можно посмотреть в логах - SQL тот же. Те `DISTINCT` влияет на то, как Hibernate обрабатывает дублирующие записи (с `DISTINCT` их исключает). Результат можно посмотреть в тестах или приложении, поставив брекпойнт (в HQL/JPQL консоли, если убрать `@Cache` аннотации и сделать `clean`, бага IDEA) иерархии объектов не увидеть.
+
+> После патча 7_12 тест ProfileRestControllerTest.testGet нам оставляет поле meals:null хотя мы задали чтоб не сериализовались null поля. Почему его оставляет сериализатор? (конечно если выставим NON_EMPTY то уберет)
 
 Там lazy коллекция, а не null. Думаю, что Hibernate5Module уже после логики NOT_NULL (JacksonObjectMapper) ее обнуляет.
 
