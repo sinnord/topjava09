@@ -145,6 +145,7 @@ hamcrest-all используется в проверках `RootControllerTest`
   -  <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-config-conversion">Кастомный Spring конвертор</a>
   -  <a href="http://stackoverflow.com/questions/13048368/difference-between-spring-mvc-formatters-and-converters">Difference between Spring MVC formatters and converters</a>
 
+**На следующем занятии используется JavaScript. Если у вас там пробелы, <a href="https://github.com/JavaOPs/topjava#html-javascript-css">пройдите его основы</a>**
 ---------------------
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Подсказки по HW07
 - для тестирования в MealRestController списка MealWithExceeded сделайте ModelMatcher&lt;MealWithExceed&gt;
