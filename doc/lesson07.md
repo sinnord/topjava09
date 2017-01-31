@@ -142,8 +142,9 @@ hamcrest-all используется в проверках `RootControllerTest`
 #### Optional
 - 3. Заменить `@DateTimeFormat` на свой LocalDateTime конвертор или форматтер.
   -  <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-config-conversion">Кастомный Spring конвертор</a>
-  -  <a href="http://sambitjavatips.blogspot.ru/2014/10/spring-custom-formatter-annotation-for.html">Spring custom formatter annotation</a>
   -  <a href="http://stackoverflow.com/questions/13048368/difference-between-spring-mvc-formatters-and-converters">Difference between Spring MVC formatters and converters</a>
+  -  Опционально: <a href="http://sambitjavatips.blogspot.ru/2014/10/spring-custom-formatter-annotation-for.html">Spring custom formatter annotation</a>
+
 - 4. Протестировать `MealRestController` через любой инструмент (SoapUi, curl, IDEA Test RESTful Web Service, Postman)
 
 **На следующем занятии используется JavaScript. Если у вас там пробелы, <a href="https://github.com/JavaOPs/topjava#html-javascript-css">пройдите его основы</a>**
