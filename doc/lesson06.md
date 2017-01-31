@@ -127,9 +127,7 @@
 - <a href="https://tomcat.apache.org/tomcat-8.0-doc/jndi-resources-howto.html"/>Tomcat JNDI Resources</a>
 - <a href="https://commons.apache.org/proper/commons-dbcp/configuration.html">BasicDataSource Configuration</a>
 
-> Вопрос: для чего нужен `cargo-maven2-plugin`? С какими настройками запускается Tomcat без плагина?
-
-С плагином мы можем сконфигурировать Tomcat приямо в `pom.xml` и запустить его с задеплоенным туда нашим приложением WAR из командной строки `mvn clean package -DskipTests=true org.codehaus.cargo:cargo-maven2-plugin:1.5.0:run` (без IDEA, без инсталляции Tomcat).
+С плагином мы можем сконфигурировать Tomcat приямо в `pom.xml` и запустить его с задеплоенным туда нашим приложением WAR из командной строки `mvn clean package -DskipTests=true org.codehaus.cargo:cargo-maven2-plugin:1.5.0:run` (без IDEA, без инсталляции Tomcat). По умолчанию он скачивает его из maven репозитория (можно также указать свой в `<container><home>${container.home}</home></container>`).
 При запуске Tomcat из IDEA запускается Tomcat,  путь к которому мы прописали в конфигурации запуска (со своими настройками). 
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 8. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQThUX2VyQXNiTHM">Spring Web MVC</a>
@@ -171,7 +169,6 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
 `<fmt:setBundle basename="messages.app"/>` означает что ресурсы будут искаться в `classpath:messages\app(_xx)/properties`:
 <a href="http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fmt/setBundle.html">Tag setBundle</a>: fully-qualified resource name, which has the same form as a fully-qualified class name.
 После сборки проекта maven их можно найти в target\classes или target\topjava\WEB-INF\classes.
-
 
 > Отлично, что она все пишет на том языке, который пришел в хидере запроса. А если я хочу выбрать?
 
