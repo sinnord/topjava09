@@ -109,6 +109,7 @@
    - <a href="https://easyjava.ru/category/data/jpa/">Разделы по Java Persistence API</a>
    - <a href="http://hibernate.org/">Hibernate</a>
    - <a href="http://docs.spring.io/spring-framework/docs/4.0.x/spring-framework-reference/html/transaction.html">Spring Framework transaction management</a>
+   - <a href="http://www.baeldung.com/persistence-with-spring-series/">Spring Persistence Tutorial</a>
    - <a href="http://www.objectdb.com/java/jpa/persistence/managed#Entity_Object_Life_Cycle">Working with JPA Entity Objects</a>
    - <a href="http://www.ibm.com/developerworks/ru/library/j-ts1/">Стратегии работы с транзакциями: Распространенные ошибки</a>
    - <a href="http://habrahabr.ru/post/208400/">Принципы работы СУБД. MVCC</a>
