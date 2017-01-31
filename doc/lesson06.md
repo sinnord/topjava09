@@ -127,6 +127,11 @@
 - <a href="https://tomcat.apache.org/tomcat-8.0-doc/jndi-resources-howto.html"/>Tomcat JNDI Resources</a>
 - <a href="https://commons.apache.org/proper/commons-dbcp/configuration.html">BasicDataSource Configuration</a>
 
+> Вопрос: для чего нужен `cargo-maven2-plugin`? С какими настройками запускается Tomcat без плагина?
+
+С плагином мы можем сконфигурировать Tomcat приямо в `pom.xml` и запустить его с задеплоенным туда нашим приложением WAR из командной строки `mvn clean package -DskipTests=true org.codehaus.cargo:cargo-maven2-plugin:1.5.0:run` (без IDEA, без инсталляции Tomcat).
+При запуске Tomcat из IDEA запускается Tomcat,  путь к которому мы прописали в конфигурации запуска (со своими настройками). 
+
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 8. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQThUX2VyQXNiTHM">Spring Web MVC</a>
 #### Apply 14-spring-webmvc.patch
 > - Починил <a href="http://stackoverflow.com/questions/10327390/how-should-i-get-root-folder-path-in-jsp-page"> путь к корню</a>
