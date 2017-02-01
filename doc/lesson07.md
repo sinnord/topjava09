@@ -156,3 +156,4 @@ hamcrest-all используется в проверках `RootControllerTest`
 - <a href="http://www.baeldung.com/jackson">Jackson JSON Tutorial</a>
 - Если у meal, приходящий в контроллер, поля null, проверьте `@RequestBody` перед параметром (данные приходят в форммате JSON)
 - При проблемах с собственным форматтером убедитесь, что в конфигурации `<mvc:annotation-driven...` не дублируется
+- *Проверьте* выполение ВСЕХ тестов через maven. В случае проблем проверьте, что не портите константу из `MealTestData`
