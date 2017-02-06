@@ -166,6 +166,19 @@ Maven скачивает все депенденси в local repository, кот
  
 См. <a href="http://stackoverflow.com/a/14568899/548473">Handle request parameters for an HTTP PUT method</a>
  
+>  Что происходит, когда мы нажимаем на кнопку submit в форме добавления юзера (`users.jsp`, `<form id="detailsForm">`)?
+
+В `datatablesUtil.js` берется DOM элемент (форма) по id="detailsForm" и на событие submit вешается обработчик:
+
+    $('#detailsForm').submit(function () {
+        save();
+        return false;
+    });
+
+> Данные между браузером и ajax гоняются в виде json?  Почему в `AdminAjaxController`  у методов delete и createOrUpdate нет в аннотациях параметра `consumes = MediaType.APPLICATION_JSON_VALUE` ?
+
+Посмотреть на данные между приложением и браузером можно (и нужно!) в браузере (вкладка Network в Инструментах разработчика, F12 в Хроме). Зависит от того, как их отправляем из браузера и из приложения. Данные формы обычно передаются просто параметрами. `APPLICATION_JSON_VALUE` в контроллере нужно, только если параметры отдаются\принимаются в формате JSON.
+
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW08
 
 - 1. Перевести `meals` на `datatables` (`meals.jsp`, `MealAjaxController`).
