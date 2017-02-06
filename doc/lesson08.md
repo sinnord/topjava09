@@ -39,7 +39,7 @@
 #### Apply 5-webjars.patch
 
 > - Обновил jQuery до 3.x
->   -  <a href="https://habrahabr.ru/post/303034"> jQuery 3.0 Final Released</a>
+>   -  <a href="https://tproger.ru/translations/new-features-of-jquery-3/">Новое в jQuery 3</a>
 > - УБРАЛ из проекта <a href="http://dandelion.github.io">Dandelion обертку к datatables</a>:
 >   -  не встречал нигде, кроме Spring Pet Clinic;
 >   -  поддержка работы с datatables через Dandelion оказалось гораздо более трудоемкое, чем работа с плагином напрямую.
