@@ -195,3 +195,4 @@ Maven скачивает все депенденси в local repository, кот
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Подсказки по HW08
 - проверьте, как у вас первоначально (или по F5) отображаются неактивные пользователи (если меняете css при enable/disable)
 - если у вас запрос фильтрации не попадает в Ajax контроллер, скорее всего срабатывает submit формы фильтрации. Нужно или делать в событии `return false` как в `datatablesUtil:$('#detailsForm').submit`, либо вместо `type="submit"` сделать `type="button"`
+- enable/disable делать c `@Transactional`
