@@ -196,4 +196,4 @@ Maven скачивает все депенденси в local repository, кот
 - проверьте, как у вас первоначально (или по F5) отображаются неактивные пользователи (если меняете css при enable/disable)
 - если у вас запрос фильтрации не попадает в Ajax контроллер, скорее всего срабатывает submit формы фильтрации. Нужно или делать в событии `return false` как в `datatablesUtil:$('#detailsForm').submit`, либо вместо `type="submit"` сделать `type="button"`
 - enable/disable делать c `@Transactional`
-- в datatablesUtil.js выностие только общие скрипты (cкрипты еды размещайте в  `mealDatatables.js`, пользователей в `userDatatables.js`)
+- в datatablesUtil.js выносите только общие скрипты (cкрипты еды размещайте в  `mealDatatables.js`, пользователей в `userDatatables.js`)
