@@ -58,7 +58,7 @@
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6.  <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFcW1qeTVFdS1BdHM">Перевод DataTables на Ajax</a>
 #### Apply 7-datatable-via-ajax.patch
--  <a href="http://legacy.datatables.net/usage/options">DataTables Options</a>
+-  [DataTables Options](https://datatables.net/manual)
 
 #### Apply 8-js-i18n.patch
 > - Добавил простую интернационализацию в JavaScript. 
