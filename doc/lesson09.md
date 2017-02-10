@@ -61,7 +61,7 @@
 -  [DataTables Options](https://datatables.net/manual)
 
 #### Apply 8-js-i18n.patch
-**Внимание- вместо "common.select" в `index.jsp` напишите `Select`. Этот JSP в патче `9_10_jsp_form_login` удалится, я поспешил с удалением в `common.select` в `app.properties`.**
+**Внимание- вместо `common.select` в `index.jsp` напишите `Select`. Этот JSP в патче `9_10_jsp_form_login` удалится, я поспешил с удалением в `common.select` в `app.properties`.**
 
 > - Добавил простую интернационализацию в JavaScript. 
 >   - на стороне сервера формируется `i18n` JavaScript массив с значениями, который затем используется для интернационализации в браузере
