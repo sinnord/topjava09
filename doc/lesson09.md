@@ -14,7 +14,7 @@
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW8
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFb0JKbElkT000amM">HW8</a>
-**Поправка к видео: в гриде bootstrap 12 колонок.**
+**Поправка к видео: <a href="http://getbootstrap.com/css/#grid">в гриде bootstrap 12 колонок</a>.**
 
 > - Все события сделал через `onlick`. Чтобы формы не сабмитились, заменил `type="submit"` на `type="button"`. 
 > - Сделал сброс (reset) полей формы при вводе
