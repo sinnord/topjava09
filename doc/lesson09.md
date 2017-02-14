@@ -140,6 +140,7 @@
 - Подключить datetime-picker
   - <a href="http://xdsoft.net/jqplugins/datetimepicker/">DateTimePicker jQuery plugin</a>
   - Еще есть <a href="https://eonasdan.github.io/bootstrap-datetimepicker/">Bootstrap 3 Datepicker</a>
+Попробуйте при запросах по REST оставить стандартный ISO формат (с разделителем `T`)
 
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Проверка в HW09
 - Проверьте, что при добавлении и редактировании пользователя и еды у вас корректно отображаются заголовки модального окна:
