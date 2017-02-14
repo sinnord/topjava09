@@ -152,4 +152,4 @@
 i18n['${key}'] = ...
 ```
 - Для подключения css и js datetimepicker-а посмотрите в его jar (или поищите в проекте по Ctrl+Shift+N: `datetimepicker`)
-- datetimepicker работает корректно в Хроме, если убрать в JSP `<input type="date/time/datetime-local" ..`
+- datetimepicker работает корректно в Хроме, если убрать в `<input` JSP  `type="date/time/datetime-local" ..`
