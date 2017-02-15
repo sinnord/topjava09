@@ -76,12 +76,13 @@
 
 -  <a href="http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#ns-minimal">Минимальный form-login</a>
 -  <a href="http://docs.spring.io/spring-security/site/migrate/current/3-to-4/html5/migrate-3-to-4-xml.html#m3to4-xmlnamespace-form-login">Migrating &lt;form-login&gt;</a>
-- Вопросы
-  - Почему при логине как admin еда отдаются для user?
-  - Почему при логине как user не отображается список пользователей?
-  - Почему еда не редактируется?
-  
- Подсказка: поглядите вкладку Network в браузере.
+
+#### ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Вопросы:
+- Почему при логине как admin еда отдаются для user?
+- Почему при логине как user не отображается список пользователей?
+- Почему еда не редактируется?
+
+> Подсказка: поглядите вкладку Network в браузере.
  
 #### Apply 10-jsp-form-login.patch
 -  <a href="http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#ns-form-and-basic">Собственный form-login</a>
