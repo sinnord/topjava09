@@ -6,7 +6,7 @@
 - **При удалении файлов не забывайте делать clean: `mvn clean package`**
 
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правка
-#### Apply 9_0_fix
+#### Apply 0_fix
 
 > - Обновил версии Spring и заодно остальных зависимостей (от `spring-security` в логах предупреждение: `WARN  SpringSecurityCoreVersion [SpringSecurityCoreVersion.java:78] **** You are advised to use Spring 4.3.5.RELEASE or later with this version. You are running: 4.3.4.RELEASE`)
 > - Убрал лишние аттрибуты из `users.jsp`. Поправил расположение `<script>` (должно быть либо в `<head>`, либо в `<body>`)
