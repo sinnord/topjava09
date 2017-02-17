@@ -21,6 +21,8 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZnQ2dDZsT0dvYjQ">HW9</a>
 #### Apply 1_HW9_binding_ajax.patch
 
+Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те при отрисовке таблица сама по этому url запрашивает данные. Поэтому в методе `RootController.meals()` нам нужно только возвратить view "meals" (`meals.jsp`) которому уже не нужны данные в атрибутах.
+
 > - JavaScript `i18n[]` локализацию перенес в `footer.jsp`
 > - Вынес общий код в `ValidationUtil.getErrorResponse()` 
 
@@ -29,7 +31,7 @@
 #### Apply 2_HW9_test.patch
 #### Apply 3_HW9_datetimepicker.patch
 
-> - Изменил формат ввода dateTime в форме без 'T': при биндинге значений к полям формы в `datatablesUtil.updateRow` для поля `dateTime` делаю `replace('T', ' ')`. 
+> - Изменил формат ввода dateTime в форме без 'T': при биндинге значений к полям формы в `datatablesUtil.updateRow` для поля `dateTime` делаю `replace('T', ' ')`.  REST интерфейс по прежнему работает в стандарте ISO-8601
 > - Вынес общий код в `datatablesUtil.formatDate()` 
 
 - <a href="http://xdsoft.net/jqplugins/datetimepicker/">DateTimePicker jQuery plugin</a>
