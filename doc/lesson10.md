@@ -125,6 +125,7 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
   - <a href="https://dzone.com/articles/spring-31-valid-requestbody">@Valid @RequestBody + Error handling</a>
 - 3. Сделать обработку ошибки при дублирования email ("User with this email already present in application") для: 
   - 3.1 регистрации / редактирования профиля пользователя
+    - <a href="http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example/">Spring MVC form handling example</a>
   - 3.2 добавления / редактирования пользователя в таблице
     
 #### Optional
