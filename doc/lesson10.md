@@ -119,9 +119,9 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 
 [`BCryptPasswordEncoder` automatically generates a salt and concatenates it with the hash value in a single String](http://stackoverflow.com/a/8528804/548473). Для одного и тогоже пароля получаются разные хэши. Cравнивать их можно только через `isMatch()` с незахэшированным паролем. 
 
-> Когда запускается в `GlobalControllerExceptionHandler` метод `defaultErrorHandler`? Когда как в него исключение попадает?
+> Когда запускается в `GlobalControllerExceptionHandler` метод `defaultErrorHandler`? Когда как в него исключение попадает? Как выбирается, кто обрабатывает исключения: `ExceptionInfoHandler` и `GlobalControllerExceptionHandler`?
 
- Мы GlobalControllerExceptionHandler  в контекст внесли (через `@ControllerAdvice` его находят в пакете `web`). Спринг перехватывает исключения и туда отправляет.
+ Мы GlobalControllerExceptionHandler  в контекст внесли (через `@ControllerAdvice` его находят в пакете `web`). Спринг перехватывает исключения и туда отправляет. `ExceptionInfoHandler` помечен `@ControllerAdvice(annotations = RestController.class)`, он обрабатывает  только ошибки из всех контроллеров с аннотацией `RestController.class`.
  
  > Откуда берутся в валидации сообщения на русском "должно быть между 10 и 10000"?
  
