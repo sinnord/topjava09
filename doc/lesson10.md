@@ -136,12 +136,15 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
   - 3.1 регистрации / редактирования профиля пользователя
     - <a href="http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example/">Spring MVC form handling example</a>
   - 3.2 добавления / редактирования пользователя в таблице
-    
+  - 3.3 REST контроллеров
+  
 #### Optional
 - 4. Сделать в приложении выбор локали (см. http://topjava.herokuapp.com/)
   -  <a href="http://www.mkyong.com/spring-mvc/spring-mvc-internationalization-example">Spring MVC internationalization sample</a>
   -  <a href="http://www.concretepage.com/spring-4/spring-4-mvc-internationalization-i18n-and-localization-l10n-annotation-example">Spring 4 MVC Internationalization</a>
 - 5. Починить UTF-8 в редактировании профиля и регистрации (если кодировка по умолчанию у вас не UTF-8). Подумайте, почему кодировка поломалась.
+- 6. Сделать обработку ошибки при дублирования dateTime еды. Сделать тесты на дублирование email и dateTime.
+  - [Тесты на DB exception c @Transactional](http://stackoverflow.com/questions/37406714)
   
 -------
 
