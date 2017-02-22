@@ -149,3 +149,4 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 - Не дублируйте обработку ошибок `BindingResult`: `result.getFieldErrors()..` Также можно не создавать собственные эксепшены, а ловить в `ExceptionInfoHandler` стандартные
 - Не дублируйте код переключения локали на странице логина и в приложении
 - `ErrorInfo` просто бин для передачи информации на клиента. Кода возврата и ответ в ExceptionInfoHandler настраиваются.
+- в `MethodArgumentNotValidException` также есть `e.getBindingResult()`, его можно по аналогии с `BindException` обрабатывать
