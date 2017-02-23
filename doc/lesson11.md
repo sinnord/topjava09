@@ -35,9 +35,9 @@
 #### Apply 11-04-HW10-duplication2-tests.patch
 
 > - Изменил реализацию обработку дублирования user.email и добавил обработку дублирования meal.dateTime  
->   - через ExceptionHandler-ы для отнаследованных от заданного в `assignableTypes` контроллера (`11-03-HW10-duplication`)
->   - через поиск в сообщении корневого исключения индексов DB (`11-04-HW10-duplication2-tests`)
-> - Добавил тесты на дублирование, оставил `@Transactional` только в тестах, которые меняют DB. 
+>   - через ExceptionHandler-ы для отнаследованных от заданного в `assignableTypes` контроллера
+>   - через поиск в сообщении корневого исключения индексов DB
+> - Добавил тесты на дублирование. Оставил `@Transactional` только в тестах, которые меняют DB. 
 >   - [Cannot test expected exception when using @Transactional with @Commit](http://stackoverflow.com/questions/37406714)
 
 ###  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFYms4YUxEMHdxZHM">HW10 Optional: change locale</a>
@@ -45,7 +45,9 @@
 
 > Добавил локализацию календаря `$.datetimepicker.setLocale(localeCode)`
 
-- еще вариант смены локали в lang.jsp вместо javascript: `href=${requestScope['javax.servlet.forward.request_uri']}?lang=..`
+- еще вариант смены локали в lang.jsp вместо javascript 
+
+> `href=${requestScope['javax.servlet.forward.request_uri']}?lang=..`
 - <a href="http://pro-cod.ru/navbar-uroki-bootstrap-3.html">Bootstrap Navbar</a>
 
 ## Заключительное 11-е занятие
