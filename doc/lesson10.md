@@ -21,6 +21,8 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZnQ2dDZsT0dvYjQ">HW9</a>
 #### Apply 1_HW9_binding_ajax.patch
 
+Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те при отрисовке таблица сама по этому url запрашивает данные. Поэтому в методе `RootController.meals()` нам нужно только возвратить view "meals" (`meals.jsp`) которому уже не нужны данные в атрибутах.
+
 > - JavaScript `i18n[]` локализацию перенес в `footer.jsp`
 > - Вынес общий код в `ValidationUtil.getErrorResponse()` 
 
@@ -29,7 +31,7 @@
 #### Apply 2_HW9_test.patch
 #### Apply 3_HW9_datetimepicker.patch
 
-> - Изменил формат ввода dateTime в форме без 'T': при биндинге значений к полям формы в `datatablesUtil.updateRow` для поля `dateTime` делаю `replace('T', ' ')`. 
+> - Изменил формат ввода dateTime в форме без 'T': при биндинге значений к полям формы в `datatablesUtil.updateRow` для поля `dateTime` делаю `replace('T', ' ')`.  REST интерфейс по прежнему работает в стандарте ISO-8601
 > - Вынес общий код в `datatablesUtil.formatDate()` 
 
 - <a href="http://xdsoft.net/jqplugins/datetimepicker/">DateTimePicker jQuery plugin</a>
@@ -113,6 +115,18 @@
 
 Попробуйте выполнить ajax запрос из вашего приложения c url, у которого домен отличный от вашего (нарпимер "http://topjava.herokuapp.com/meals/ajax/admin/users/"+id). В консоли браузера будет `XMLHttpRequest cannot load`... - <a href="https://developer.chrome.com/extensions/xhr">нарушение same origin policy</a>. Формам можно делать submit (через action=..) на другой домен, но невозможно cделать Content-Type, отличный от <a href="http://htmlbook.ru/html/form/enctype">стндартных enctype</a> и методов <a href="http://htmlbook.ru/html/form/method">кроме get и post</a>. Таким образом `consumes = MediaType.APPLICATION_JSON_VALUE` в POST защищает приложение от CSRF.
 
+> Почему использован `BCryptPasswordEncoder`а не `hash(password+salt)`. Почему нельзя напрямую сравнивать закодированные пароли?
+
+[`BCryptPasswordEncoder` automatically generates a salt and concatenates it with the hash value in a single String](http://stackoverflow.com/a/8528804/548473). Для одного и тогоже пароля получаются разные хэши. Cравнивать их можно только через `isMatch()` с незахэшированным паролем. 
+
+> Когда запускается в `GlobalControllerExceptionHandler` метод `defaultErrorHandler`? Когда как в него исключение попадает? Как выбирается, кто обрабатывает исключения: `ExceptionInfoHandler` или `GlobalControllerExceptionHandler`?
+
+ Мы GlobalControllerExceptionHandler  в контекст внесли (через `@ControllerAdvice` его находят в пакете `web`). Спринг перехватывает исключения и туда отправляет. `ExceptionInfoHandler` помечен `@ControllerAdvice(annotations = RestController.class)`, он обрабатывает  только ошибки из всех контроллеров с аннотацией `RestController.class`.
+ 
+ > Откуда берутся в валидации сообщения на русском "должно быть между 10 и 10000"?
+ 
+ Я думаю локализация встроена в Hibernate Validation. Попробуйте поставить `<logger name="org.hibernate.validator" level="debug"/>`
+ и посмотреть ошибки. Дебажить `PlatformResourceBundleLocator` можно только через remote debug (потому что классы provided).
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW10
 - 1. Сделать валидацию в AdminAjaxController/MealAjaxController через `ExceptionInfoHandler` (вернуть клиенту `ErrorInfo` и статус `HttpStatus.BAD_REQUEST`. Тип методов контроллеров можно вернуть обратно на `void`).
@@ -120,16 +134,22 @@
   - <a href="https://dzone.com/articles/spring-31-valid-requestbody">@Valid @RequestBody + Error handling</a>
 - 3. Сделать обработку ошибки при дублирования email ("User with this email already present in application") для: 
   - 3.1 регистрации / редактирования профиля пользователя
+    - <a href="http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example/">Spring MVC form handling example</a>
   - 3.2 добавления / редактирования пользователя в таблице
-    
+  - 3.3 REST контроллеров
+  
 #### Optional
 - 4. Сделать в приложении выбор локали (см. http://topjava.herokuapp.com/)
   -  <a href="http://www.mkyong.com/spring-mvc/spring-mvc-internationalization-example">Spring MVC internationalization sample</a>
   -  <a href="http://www.concretepage.com/spring-4/spring-4-mvc-internationalization-i18n-and-localization-l10n-annotation-example">Spring 4 MVC Internationalization</a>
 - 5. Починить UTF-8 в редактировании профиля и регистрации (если кодировка по умолчанию у вас не UTF-8). Подумайте, почему кодировка поломалась.
+- 6. Сделать обработку ошибки при дублирования dateTime еды. Сделать тесты на дублирование email и dateTime.
+  - [Тесты на DB exception c @Transactional](http://stackoverflow.com/questions/37406714)
   
 -------
 
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Проверка в HW10
 - Не дублируйте обработку ошибок `BindingResult`: `result.getFieldErrors()..` Также можно не создавать собственные эксепшены, а ловить в `ExceptionInfoHandler` стандартные
 - Не дублируйте код переключения локали на странице логина и в приложении
+- `ErrorInfo` просто бин для передачи информации на клиента. Кода возврата и ответ в ExceptionInfoHandler настраиваются.
+- в `MethodArgumentNotValidException` также есть `e.getBindingResult()`, его можно по аналогии с `BindException` обрабатывать
