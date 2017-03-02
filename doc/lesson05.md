@@ -99,7 +99,7 @@
 #### Apply 6-spring-cache.patch
 -  <a href="http://habrahabr.ru/post/113945/">Кеширование в Spring Framework</a>
 -  <a href="http://www.ehcache.org/">EHCACHE</a>
--  В случае проблем с размещением кэш в `java.io.tmpdir` (нет доступа) смотри http://stackoverflow.com/questions/1924136/environment-variable-to-control-java-io-tmpdir (или можно в `ehcache.xml` захардкодить `<diskStore path="место_для_хранения_куда_есть_доступ">`)
+-  В случае проблем с размещением кэш в `java.io.tmpdir` (нет доступа) смотри http://stackoverflow.com/questions/1924136/environment-variable-to-control-java-io-tmpdir. Приложения в tomcat хранят временные файлы в $TOMCAT_HOME/temp, скорее всего у java нет туда доступа. (можно переместить tomcat или в `ehcache.xml` захардкодить `<diskStore path="место_для_хранения_куда_есть_доступ">`)
 -  Ресурсы:
    -  <a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/cache.html">Spring cache Abstraction</a>
    -  <a href="http://habrahabr.ru/post/25140/">Распределённая система кеша ehcache</a>
